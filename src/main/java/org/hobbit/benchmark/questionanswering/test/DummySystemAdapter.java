@@ -5,9 +5,9 @@ import java.util.HashMap;
 
 import org.apache.jena.atlas.json.JSON;
 import org.apache.jena.atlas.json.JsonArray;
+import org.hobbit.QaldBuilder;
 import org.hobbit.core.components.AbstractSystemAdapter;
 import org.hobbit.core.rabbit.RabbitMQUtils;
-import org.hobbit.qaldbuilder.QaldBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
