@@ -1,0 +1,10 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hobbit: <http://w3id.org/hobbit/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gerbilqa: <http://w3id.org/gerbil/qa/hobbit/vocab#> .
+
+<http://w3id.org/hobbit/systems/getansformulti> a  hobbit:SystemInstance; 
+	rdfs:label	"Get answers from Multilingual"@en;
+	rdfs:comment	"Get answers from Multilingual endpoints to count nonempty answers"@en;
+    hobbit:imageName "git.project-hobbit.eu:4567/weekmo/getanswers";
+    hobbit:implementsAPI gerbilqa:GerbilQAApi .
