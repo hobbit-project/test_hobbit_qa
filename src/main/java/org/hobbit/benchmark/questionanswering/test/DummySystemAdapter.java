@@ -17,10 +17,8 @@ public class DummySystemAdapter extends AbstractSystemAdapter {
 	private final String TESTING="testing", TRAINING="training";
 	
 	private String language,task,dataSetType,endpoint;
-	private HashMap<Integer, HashMap<String,String>> multiTestingQueries;
-	private HashMap<Integer, HashMap<String,String>> multiTrainingQueries;
-	private HashMap<Integer, String> largeTestingQueries;
-	private HashMap<Integer, String> largeTrainingQueries;
+	private HashMap<Integer, HashMap<String,String>> multiTestingQueries,multiTrainingQueries;
+	private HashMap<Integer, String> largeTestingQueries,largeTrainingQueries;
 	
 	private boolean setParams;
 	
@@ -88,7 +86,7 @@ public class DummySystemAdapter extends AbstractSystemAdapter {
 		}catch(Exception ex){
 			LOGGER.error("QaDummySys:"+ex.getMessage());
 		}
-		String qaldAnswer = qaldBuilder.getQaldQuestion();
+		String qaldAnswer = qaldBuilder.getQuestionAsQald().toString();
 		byte[] sendData = RabbitMQUtils.writeString(qaldAnswer);
 		try {
 			sendResultToEvalStorage(taskIdString, sendData);
